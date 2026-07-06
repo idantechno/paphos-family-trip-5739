@@ -5,7 +5,7 @@
 'use strict';
 
 /* ---------------- הגדרות ---------------- */
-const SYNC_URL = 'https://kvdb.io/JqAW1C9AwkwzrTbrgVGfCK/trip-state';
+const SYNC_URL = 'https://textdb.dev/api/data/paphos26-portal-8P6VAJ-v4k9t';
 const POLL_MS = 20000;
 const LS_KEY = 'paphos26-state';
 const TRIP_START = new Date('2026-07-11T08:40:00+03:00'); // המראה
@@ -342,9 +342,11 @@ function setSyncStatus(mode, text) {
 async function pullRemote() {
   try {
     const res = await fetch(SYNC_URL, { cache: 'no-store' });
-    if (res.status === 404) { setSyncStatus('on', 'מסונכרן'); return true; } // עדיין אין מצב בענן
     if (!res.ok) throw new Error('http ' + res.status);
-    const remote = await res.json();
+    const txt = (await res.text()).trim();
+    if (!txt) { setSyncStatus('on', 'מסונכרן'); return true; } // עדיין אין מצב בענן
+    let remote = null;
+    try { remote = JSON.parse(txt); } catch (e) { setSyncStatus('on', 'מסונכרן'); return true; }
     const changed = mergeStates(remote);
     if (changed) { saveLocal(); renderAllChecks(); updateRings(); }
     setSyncStatus('on', 'מסונכרן');
@@ -361,15 +363,18 @@ async function pushRemote() {
     // מיזוג אחרון לפני כתיבה כדי לא לדרוס סימונים מהטלפון השני
     try {
       const res = await fetch(SYNC_URL, { cache: 'no-store' });
-      if (res.ok) mergeStates(await res.json());
+      if (res.ok) {
+        const txt = (await res.text()).trim();
+        if (txt) { try { mergeStates(JSON.parse(txt)); } catch (e) {} }
+      }
     } catch (e) {}
     const body = JSON.stringify(state);
+    // POST עם text/plain = בקשה "פשוטה" בלי preflight — עובד מכל דפדפן
     const put = await fetch(SYNC_URL, {
-      method: 'PUT',
-      headers: { 'Content-Type': 'application/json' },
+      method: 'POST',
+      headers: { 'Content-Type': 'text/plain' },
       body,
     });
-    if (put.status === 403) { saveLocal(); setSyncStatus('off', 'נשמר בטלפון (סנכרון ממתין לאימות)'); return; }
     if (!put.ok) throw new Error('http ' + put.status);
     lastSyncedJson = body;
     saveLocal();
