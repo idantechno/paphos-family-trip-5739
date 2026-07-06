@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>פאפוס 2026 · הטיול המשפחתי שלנו</title>
+<meta name="description" content="האפליקציה המשפחתית לטיול בפאפוס — עידן, ליאל וליאו · 11–15 ביולי 2026">
+<meta name="theme-color" content="#FAF5EC">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" type="image/png" href="img/icon-180.png">
+<link rel="apple-touch-icon" href="img/icon-180.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="פאפוס 2026">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600;700;800&family=Frank+Ruhl+Libre:wght@700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="app">
+
+  <!-- ================= כותרת עליונה ================= -->
+  <header class="masthead">
+    <div class="brand">
+      <img class="brand-icon" src="img/icon-180.png" alt="">
+      <div>
+        <div class="brand-name">פאפוס 2026</div>
+        <div class="brand-sub">עידן · ליאל · ליאו</div>
+      </div>
+    </div>
+    <div class="sync-chip" id="syncChip"><span class="dot"></span><span class="txt">מתחבר…</span></div>
+  </header>
+
+  <!-- ================= בית ================= -->
+  <section class="view active" id="view-home">
+
+    <div class="shell rv">
+      <div class="core hero-core">
+        <div class="hero-orb"></div>
+        <span class="eyebrow">החופשה המשפחתית שלנו</span>
+        <h1 class="display" id="heroTitle">פאפוס מחכה לנו ☀️</h1>
+        <p class="lede" id="heroSub">עידן, ליאל וליאו · 11–15 ביולי · King Evelthon</p>
+        <div class="countdown" id="cdWrap">
+          <div class="cd-cell"><div class="cd-num" id="cd-d">–</div><div class="cd-lab">ימים</div></div>
+          <div class="cd-cell"><div class="cd-num" id="cd-h">–</div><div class="cd-lab">שעות</div></div>
+          <div class="cd-cell"><div class="cd-num" id="cd-m">–</div><div class="cd-lab">דקות</div></div>
+        </div>
+        <span class="today-badge" id="todayBadge" style="display:none"></span>
+      </div>
+    </div>
+
+    <!-- טבעות התקדמות -->
+    <div class="rings rv">
+      <div class="ring-card" data-goto="lists:tasks">
+        <div class="ring-wrap">
+          <svg width="70" height="70" viewBox="0 0 60 60">
+            <circle class="ring-bg" cx="30" cy="30" r="26"/>
+            <circle class="ring-fg" id="ring-tasks" cx="30" cy="30" r="26"/>
+          </svg>
+          <div class="ring-pct" id="ringpct-tasks">0%</div>
+        </div>
+        <div class="ring-lab">משימות</div>
+        <div class="ring-sub" id="ringsub-tasks">–</div>
+      </div>
+      <div class="ring-card" data-goto="lists:pack">
+        <div class="ring-wrap">
+          <svg width="70" height="70" viewBox="0 0 60 60">
+            <circle class="ring-bg" cx="30" cy="30" r="26"/>
+            <circle class="ring-fg" id="ring-pack" cx="30" cy="30" r="26"/>
+          </svg>
+          <div class="ring-pct" id="ringpct-pack">0%</div>
+        </div>
+        <div class="ring-lab">אריזה</div>
+        <div class="ring-sub" id="ringsub-pack">–</div>
+      </div>
+    </div>
+
+    <!-- מזג אוויר חי -->
+    <div class="sec-head rv"><span class="eyebrow sun">עדכון חי</span><h2 class="sec-title">מזג האוויר בפאפוס</h2></div>
+    <div class="shell rv"><div class="core" id="wxBody"><div class="wx-fallback">טוען תחזית חיה…</div></div></div>
+
+    <!-- טיסות -->
+    <div class="sec-head rv"><span class="eyebrow">ישראייר · הזמנה 8P6VAJ</span><h2 class="sec-title">הטיסות שלנו</h2></div>
+    <div class="shell rv">
+      <div class="core">
+        <div class="tag hot">🛫 הלוך · שבת 11.7 · 6H595</div>
+        <div class="flight-strip">
+          <div class="fs-point"><div class="fs-code">TLV</div><div class="fs-time">08:40</div><div class="fs-city">בן גוריון</div></div>
+          <div class="fs-path"><div class="fs-line"></div><span class="fs-plane">✈️</span><div class="fs-line"></div></div>
+          <div class="fs-point"><div class="fs-code">PFO</div><div class="fs-time">09:50</div><div class="fs-city">פאפוס</div></div>
+        </div>
+        <div class="fs-meta"><span class="tag">1h10m</span><span class="tag">מזוודה 23 ק"ג ✓</span><span class="tag">תיק יד 30×40×20</span></div>
+
+        <div style="height:1.1rem"></div>
+        <div class="tag">🛬 חזור · רביעי 15.7 · 6H596</div>
+        <div class="flight-strip">
+          <div class="fs-point"><div class="fs-code">PFO</div><div class="fs-time">17:50</div><div class="fs-city">פאפוס</div></div>
+          <div class="fs-path"><div class="fs-line"></div><span class="fs-plane">✈️</span><div class="fs-line"></div></div>
+          <div class="fs-point"><div class="fs-code">TLV</div><div class="fs-time">18:50</div><div class="fs-city">בן גוריון</div></div>
+        </div>
+        <div class="fs-meta"><span class="tag">1h00m</span></div>
+
+        <div class="callout warn">⚠️ <b>אין צ׳ק-אין אונליין בטיסה זו</b> — עושים צ׳ק-אין בדלפק בשדה. מומלץ להגיע ~3 שעות לפני. את מספר הטרמינל בודקים ביום הטיסה.</div>
+
+        <details class="tickets">
+          <summary>פרטי הכרטיסים של כולם</summary>
+          <div class="fact-row"><div class="fact-ico">👨</div><div><div class="fact-t">עידן · E-Ticket</div><div class="fact-v">818-9480527375</div></div></div>
+          <div class="fact-row"><div class="fact-ico">🤰</div><div><div class="fact-t">ליאל · E-Ticket</div><div class="fact-v">818-9480527376</div></div></div>
+          <div class="fact-row"><div class="fact-ico">👶</div><div><div class="fact-t">ליאו (תינוק) · E-Ticket</div><div class="fact-v">INF 818-9480527377</div></div></div>
+        </details>
+
+        <div class="live-links">
+          <a class="live-pill" target="_blank" rel="noopener" href="https://www.flightradar24.com/data/flights/6h595">סטטוס טיסה הלוך בזמן אמת</a>
+          <a class="live-pill" target="_blank" rel="noopener" href="https://www.flightradar24.com/data/flights/6h596">סטטוס טיסה חזור</a>
+          <a class="live-pill" target="_blank" rel="noopener" href="https://www.israir.co.il/">אתר ישראייר</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- מלון -->
+    <div class="sec-head rv"><span class="eyebrow coral">הבית שלנו לשבוע</span><h2 class="sec-title">King Evelthon Beach Hotel</h2></div>
+    <div class="shell rv">
+      <div class="core flush">
+        <div class="attr-photo" style="height:11rem">
+          <img src="img/hotel-beach.jpg" alt="קו החוף ליד המלון" loading="lazy">
+          <div class="attr-overlay">
+            <div class="a-kicker">Chloraka · על קו החוף</div>
+            <h3>4 לילות · חצי פנסיון</h3>
+          </div>
+        </div>
+        <div class="attr-body">
+          <div class="fact-row"><div class="fact-ico">🔑</div><div><div class="fact-t">קוד אישור</div><div class="fact-v">803002704</div></div></div>
+          <div class="fact-row"><div class="fact-ico">🛏️</div><div><div class="fact-t">חדר</div><div class="fact-v">Superior · מיטה זוגית · נוף חלקי לים ומרפסת</div></div></div>
+          <div class="fact-row"><div class="fact-ico">🍽️</div><div><div class="fact-t">בסיס אירוח</div><div class="fact-v">חצי פנסיון <small>— ארוחת בוקר וערב כלולות</small></div></div></div>
+          <div class="fact-row"><div class="fact-ico">📞</div><div><div class="fact-t">טלפון המלון</div><div class="fact-v"><a href="tel:+35726622405" style="color:inherit;text-decoration:none">‎+357 26 622405</a></div></div></div>
+          <div class="fact-row"><div class="fact-ico">✉️</div><div><div class="fact-t">מייל הזמנות</div><div class="fact-v">reservations@tsokkos.com</div></div></div>
+          <div class="live-links">
+            <a class="live-pill" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=King+Evelthon+Beach+Hotel+Chloraka">ניווט למלון</a>
+            <a class="live-pill" target="_blank" rel="noopener" href="https://www.tsokkos.com/hotel/King-Evelthon-Beach-Hotel-and-Resort/">אתר המלון</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ================= רשימות ================= -->
+  <section class="view" id="view-lists">
+    <div class="sec-head"><span class="eyebrow olive">מסתנכרן בין הטלפונים שלכם</span><h2 class="sec-title">הרשימות שלנו ✓</h2></div>
+    <div class="subtabs">
+      <button class="subtab active" data-tab="tasks">📋 לפני הטיסה</button>
+      <button class="subtab" data-tab="pack">🧳 אריזה</button>
+    </div>
+    <div id="tasksWrap"></div>
+    <div id="packWrap" style="display:none"></div>
+  </section>
+
+  <!-- ================= לו"ז ================= -->
+  <section class="view" id="view-days">
+    <div class="sec-head"><span class="eyebrow">5 ימים · קצב של משפחה</span><h2 class="sec-title">התוכנית שלנו יום-יום</h2></div>
+    <div class="callout info" style="margin-bottom:1.2rem">🍼 הלו"ז בנוי סביב ליאו: אטרקציה אחת ביום בשעות הקרירות, שנ"צ אחר הצהריים, וערב רגוע. יש הרבה אוויר — זו חופשה, לא מרוץ.</div>
+    <div id="daysWrap"></div>
+  </section>
+
+  <!-- ================= אטרקציות ================= -->
+  <section class="view" id="view-attr">
+    <div class="sec-head"><span class="eyebrow coral">המקומות שלנו</span><h2 class="sec-title">אטרקציות ומסעדה 🌊</h2></div>
+    <div id="attrWrap"></div>
+  </section>
+
+  <!-- ================= עוד ================= -->
+  <section class="view" id="view-more">
+    <div class="sec-head"><span class="eyebrow">כל השאר</span><h2 class="sec-title">מידע וכלים</h2></div>
+
+    <div class="shell rv"><div class="core menu-card" data-goto="transport">
+      <div class="menu-emo">🚌</div>
+      <div><div class="menu-t">תחבורה</div><div class="menu-s">אוטובוסים, מוניות ומעקב חי</div></div>
+      <div class="menu-arrow">→</div>
+    </div></div>
+
+    <div class="shell rv"><div class="core menu-card" data-goto="money">
+      <div class="menu-emo">💶</div>
+      <div><div class="menu-t">כסף</div><div class="menu-s">שער חי, תקציב וטיפים</div></div>
+      <div class="menu-arrow">→</div>
+    </div></div>
+
+    <div class="shell rv"><div class="core menu-card" data-goto="info">
+      <div class="menu-emo">🩺</div>
+      <div><div class="menu-t">מידע חשוב</div><div class="menu-s">חירום, בריאות, הריון ותינוק בחום</div></div>
+      <div class="menu-arrow">→</div>
+    </div></div>
+
+    <div class="foot rv">
+      <b>פאפוס 2026</b> · נבנה באהבה לעידן, ליאל וליאו 💙<br>
+      צילומים: Wikimedia Commons (CC BY / CC BY-SA) —
+      <a href="https://commons.wikimedia.org/wiki/File:Paphos_March_2013_470_(10126928656).jpg" target="_blank" rel="noopener" style="color:inherit">הנמל</a> ·
+      <a href="https://commons.wikimedia.org/wiki/File:Cyprus-Paphos-Castle-1112.jpg" target="_blank" rel="noopener" style="color:inherit">הטירה</a> ·
+      <a href="https://commons.wikimedia.org/wiki/File:Coral_Bay,_Cyprus.jpg" target="_blank" rel="noopener" style="color:inherit">קורל ביי</a> ·
+      <a href="https://commons.wikimedia.org/wiki/File:Paphos_Zoo,_Cyprus_-_panoramio_(2).jpg" target="_blank" rel="noopener" style="color:inherit">גן החיות</a> ·
+      <a href="https://commons.wikimedia.org/wiki/File:Blue_Coral_Beach,_Kissonerga,_Kypr_01.jpg" target="_blank" rel="noopener" style="color:inherit">החוף</a>
+    </div>
+  </section>
+
+  <!-- ================= תחבורה ================= -->
+  <section class="view" id="view-transport">
+    <button class="back-btn" data-goto="more">→ חזרה</button>
+    <div class="sec-head" style="padding-top:0"><span class="eyebrow">מתעדכן בזמן אמת</span><h2 class="sec-title">תחבורה בפאפוס 🚌</h2></div>
+
+    <div class="callout love" style="margin-bottom:1.2rem">⭐ <b>הגילוי הכי שימושי:</b> קו 615 עוצר ממש מול המלון שלנו על כביש החוף — ישירות לקורל ביי בכיוון אחד ולתחנת Tombs of the Kings (מעבר לנמל) בכיוון השני. כל ~10–25 דקות!</div>
+
+    <div class="shell rv"><div class="core">
+      <div class="cg-title" style="margin-bottom:0.5rem"><span class="emo">🚏</span>הקווים שלנו</div>
+      <div class="fact-row"><div class="fact-ico">6️⃣1️⃣5️⃣</div><div><div class="fact-t">מול המלון ↔ קורל ביי ↔ תחנת Tombs of the Kings</div><div class="fact-v">כל 10–25 דק׳ · עד ~00:15 בלילה <small>— הקו שלנו לחוף ולעיר</small></div></div></div>
+      <div class="fact-row"><div class="fact-ico">6️⃣1️⃣1️⃣</div><div><div class="fact-t">תחנת Tombs of the Kings ↔ הנמל</div><div class="fact-v">ההמשך לנמל פאפוס <small>— מתחברים אליו מקו 615</small></div></div></div>
+      <div class="fact-row"><div class="fact-ico">6️⃣1️⃣2️⃣</div><div><div class="fact-t">שדה התעופה ↔ העיר</div><div class="fact-v">בערך כל שעה · ~35 דק׳ <small>— אנחנו לוקחים מונית, אבל טוב לדעת</small></div></div></div>
+      <div class="fact-row"><div class="fact-ico">🦜</div><div><div class="fact-t">לגן החיות</div><div class="fact-v">הסעה של הגן מהמלון (בהזמנה מראש) <small>— ‎€22 כולל כניסה. אין קו ציבורי לגן עצמו</small></div></div></div>
+    </div></div>
+
+    <div class="shell rv"><div class="core">
+      <div class="cg-title" style="margin-bottom:0.5rem"><span class="emo">🎫</span>כרטיסים ומחירים</div>
+      <div class="fs-meta" style="margin-top:0.2rem">
+        <span class="tag">נסיעה ‎€2</span><span class="tag">אחרי 21:00 ‎€3</span><span class="tag">חופשי-יומי ‎€6.50</span><span class="tag hot">ליאו נוסע חינם</span>
+      </div>
+      <div class="callout info">💶 קונים <b>במזומן אצל הנהג</b> — כדאי סכום מדויק. האוטובוסים מודרניים עם רצפה נמוכה — נוח עם עגלה (מקפלים או חונים באזור המרווח).</div>
+      <div class="live-links">
+        <a class="live-pill" target="_blank" rel="noopener" href="https://livebuses.com/osypa">איפה האוטובוס עכשיו? מעקב חי</a>
+        <a class="live-pill" target="_blank" rel="noopener" href="https://www.pafosbuses.com/pafos-city-suburbs-routes-1/615">לו"ז חי קו 615</a>
+        <a class="live-pill" target="_blank" rel="noopener" href="https://www.pafosbuses.com/pafos-city-suburbs-routes-1/611">לו"ז חי קו 611</a>
+        <a class="live-pill" target="_blank" rel="noopener" href="https://www.pafosbuses.com/tickets">מחירון רשמי</a>
+      </div>
+    </div></div>
+
+    <div class="shell rv"><div class="core">
+      <div class="cg-title" style="margin-bottom:0.5rem"><span class="emo">🚕</span>מוניות</div>
+      <div class="fact-row"><div class="fact-ico">🛬</div><div><div class="fact-t">שדה ↔ מלון (~25 דק׳)</div><div class="fact-v">‎€25–35 במחיר קבוע מראש <small>— להזמין עם כיסא תינוק!</small></div></div></div>
+      <div class="fact-row"><div class="fact-ico">⚓</div><div><div class="fact-t">מלון ↔ נמל (~10 דק׳)</div><div class="fact-v">‎€10–15 לפי מונה</div></div></div>
+      <div class="fact-row"><div class="fact-ico">👶</div><div><div class="fact-t">מוניות עם כיסא תינוק</div><div class="fact-v">Taxi Bambino <small>— מתמחים בדיוק בזה, מזמינים מראש באתר</small></div></div></div>
+      <div class="fact-row"><div class="fact-ico">📱</div><div><div class="fact-t">אפליקציות</div><div class="fact-v">Bolt עובד בפאפוס <small>(מעט נהגים — לא לסמוך עליו בלילה)</small> · אין Uber</div></div></div>
+      <div class="fact-row"><div class="fact-ico">☎️</div><div><div class="fact-t">מוניות מקומיות</div><div class="fact-v"><a href="tel:+35726923000" style="color:inherit;text-decoration:none">Union Taxis ‎+357 26 923000</a><br><a href="tel:+35799423372" style="color:inherit;text-decoration:none">Andreas Taxi ‎+357 99 423372</a></div></div></div>
+      <div class="live-links">
+        <a class="live-pill" target="_blank" rel="noopener" href="https://www.taxibambino.com/paphos-airport-taxi-with-car-seat">הזמנת מונית עם כיסא תינוק</a>
+      </div>
+    </div></div>
+  </section>
+
+  <!-- ================= כסף ================= -->
+  <section class="view" id="view-money">
+    <button class="back-btn" data-goto="more">→ חזרה</button>
+    <div class="sec-head" style="padding-top:0"><span class="eyebrow sun">שער מתעדכן חי</span><h2 class="sec-title">כסף 💶</h2></div>
+
+    <div class="shell rv"><div class="core tinted" id="fxBody"><div class="wx-fallback">טוען שער חי…</div></div></div>
+
+    <div class="shell rv"><div class="core">
+      <div class="cg-title" style="margin-bottom:0.5rem"><span class="emo">🧮</span>כמה כסף לתכנן? (הערכה)</div>
+      <div class="fact-row"><div class="fact-ico">🚕</div><div><div class="fact-t">מוניות (שדה הלוך-חזור + נמל)</div><div class="fact-v">~‎€85</div></div></div>
+      <div class="fact-row"><div class="fact-ico">⛵</div><div><div class="fact-t">שייט זכוכית (2 מבוגרים)</div><div class="fact-v">‎€30 <small>· ליאו חינם</small></div></div></div>
+      <div class="fact-row"><div class="fact-ico">🦒</div><div><div class="fact-t">גן החיות כולל הסעה (2 מבוגרים)</div><div class="fact-v">‎€44 <small>· ליאו חינם</small></div></div></div>
+      <div class="fact-row"><div class="fact-ico">🎂</div><div><div class="fact-t">ערב יום הולדת</div><div class="fact-v">~‎€90–110</div></div></div>
+      <div class="fact-row"><div class="fact-ico">🏖️</div><div><div class="fact-t">חוף (מיטות, אוטובוס, קפה)</div><div class="fact-v">~‎€35</div></div></div>
+      <div class="fact-row"><div class="fact-ico">🍦</div><div><div class="fact-t">קטנות: גלידות, קפה, סופר, טירה</div><div class="fact-v">~‎€80</div></div></div>
+      <div class="fact-row"><div class="fact-ico">Σ</div><div><div class="fact-t">סה"כ צפוי מעבר למלון ולטיסות</div><div class="fact-v">~‎€360–400 <small>לכל הטיול</small></div></div></div>
+    </div></div>
+
+    <div class="shell rv"><div class="core">
+      <div class="cg-title" style="margin-bottom:0.5rem"><span class="emo">💡</span>טיפים</div>
+      <div class="callout info" style="margin-top:0">💳 כרטיסי אשראי (כולל אלחוטי) מתקבלים כמעט בכל מקום. <b>מזומן חובה ל:</b> אוטובוסים, מיטות שיזוף, קיוסקים וטיפים. ~‎€150 במזומן בקטנות זה מספיק.</div>
+      <div class="callout warn">🪙 טיפ במסעדות: 5–10% אם אין דמי שירות בחשבון. במונית מקובל לעגל למעלה.</div>
+    </div></div>
+  </section>
+
+  <!-- ================= מידע חשוב ================= -->
+  <section class="view" id="view-info">
+    <button class="back-btn" data-goto="more">→ חזרה</button>
+    <div class="sec-head" style="padding-top:0"><span class="eyebrow coral">בריאות ושקט נפשי</span><h2 class="sec-title">מידע חשוב 🩺</h2></div>
+
+    <div class="shell rv"><div class="core">
+      <div class="cg-title" style="margin-bottom:0.5rem"><span class="emo">🚨</span>חירום</div>
+      <div class="fact-row"><div class="fact-ico">📞</div><div><div class="fact-t">חירום כלל-אירופי (משטרה/אמבולנס/כיבוי)</div><div class="fact-v"><a href="tel:112" style="color:inherit;text-decoration:none">112</a></div></div></div>
+      <div class="fact-row"><div class="fact-ico">🏥</div><div><div class="fact-t">בית החולים הכללי של פאפוס · מיון 24/7</div><div class="fact-v"><a href="tel:+35726803100" style="color:inherit;text-decoration:none">‎+357 26 803100</a> <small>· Achepans St., Anavargos</small></div></div></div>
+      <div class="live-links">
+        <a class="live-pill" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Paphos+General+Hospital">ניווט לבית החולים</a>
+        <a class="live-pill" target="_blank" rel="noopener" href="https://cyprus.ondutypharmacy.com/paphos/">בתי מרקחת תורניים הלילה</a>
+        <a class="live-pill" target="_blank" rel="noopener" href="https://www.gov.il/he/departments/israel_embassy_in_cyprus">שגרירות ישראל בקפריסין</a>
+      </div>
+    </div></div>
+
+    <div class="shell rv"><div class="core">
+      <div class="cg-title" style="margin-bottom:0.5rem"><span class="emo">🤰</span>ליאל — הריון בחום</div>
+      <div class="callout love" style="margin-top:0">לשתות הרבה יותר מהרגיל, להימנע משמש ישירה בין 12:00–16:00 (בדיוק שעות הבריכה במלון הממוזג 😉), שחייה זה מעולה לצינון, ולא להסס לנוח. מכתב הרופא באנגלית בתיק המסמכים.</div>
+    </div></div>
+
+    <div class="shell rv"><div class="core">
+      <div class="cg-title" style="margin-bottom:0.5rem"><span class="emo">👶</span>ליאו — תינוק בחום קפריסאי</div>
+      <div class="callout warn" style="margin-top:0">☀️ UV ביולי הוא 10+: כובע רחב, SPF50 מינרלי, ובגד ים עם שרוול ארוך. <b>לא לכסות את העגלה בשמיכה</b> — זה כולא חום; רק מגן שמש ייעודי מאוורר.</div>
+      <div class="callout info">💧 מי הברז בטוחים רשמית, אבל המקומיים שותים מינרלים — <b>לליאו ולהכנת מטרנה: רק מים מינרלים</b>. לרחצה וצחצוח — ברז זה בסדר.</div>
+    </div></div>
+
+    <div class="shell rv"><div class="core">
+      <div class="cg-title" style="margin-bottom:0.5rem"><span class="emo">🧳</span>כבודה ושדה</div>
+      <div class="fact-row"><div class="fact-ico">🧳</div><div><div class="fact-t">מזוודה לבטן המטוס</div><div class="fact-v">עד 23 ק"ג <small>· נמסרת בדלפקי הצ׳ק-אין</small></div></div></div>
+      <div class="fact-row"><div class="fact-ico">🎒</div><div><div class="fact-t">תיק יד</div><div class="fact-v">30×40×20 ס"מ · עד 3 ק"ג <small>· נכנס מתחת למושב</small></div></div></div>
+      <div class="fact-row"><div class="fact-ico">🛗</div><div><div class="fact-t">עגלה</div><div class="fact-v">נמסרת בדלת המטוס <small>· חינם, לא נחשבת בכבודה</small></div></div></div>
+      <div class="fact-row"><div class="fact-ico">🛂</div><div><div class="fact-t">דרכונים</div><div class="fact-v">תוקף 6 חודשים לפחות מיום החזרה</div></div></div>
+      <div class="callout warn">⚠️ מספר הטרמינל בנתב"ג יכול להשתנות — בודקים באתר ישראייר או בהגעה לשדה ביום הטיסה.</div>
+    </div></div>
+
+    <div class="shell rv"><div class="core">
+      <div class="cg-title" style="margin-bottom:0.5rem"><span class="emo">🔌</span>קטנות ששוכחים</div>
+      <div class="callout info" style="margin-top:0">בקפריסין <b>שקע בריטי (G)</b> — חובה מתאמים! · שעון קפריסין = שעון ישראל · העברית לא שגורה אבל אנגלית כן · יום ראשון הרבה חנויות סגורות, המסעדות פתוחות.</div>
+    </div></div>
+  </section>
+
+</div>
+
+<!-- ================= ניווט תחתון ================= -->
+<nav class="bottom-nav">
+  <button class="nav-btn active" data-view="home"><span class="n-ico">🏠</span>בית</button>
+  <button class="nav-btn" data-view="lists"><span class="n-ico">✅</span>רשימות</button>
+  <button class="nav-btn" data-view="days"><span class="n-ico">🗓️</span>לו"ז</button>
+  <button class="nav-btn" data-view="attr"><span class="n-ico">🌊</span>מקומות</button>
+  <button class="nav-btn" data-view="more"><span class="n-ico">✨</span>עוד</button>
+</nav>
+
+<script src="js/app.js"></script>
+</body>
+</html>

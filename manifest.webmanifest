@@ -1,0 +1,14 @@
+{
+  "name": "פאפוס 2026 — הטיול המשפחתי שלנו",
+  "short_name": "פאפוס 2026",
+  "description": "אפליקציית הטיול המשפחתית לפאפוס — עידן, ליאל וליאו",
+  "lang": "he",
+  "dir": "rtl",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#FAF5EC",
+  "theme_color": "#FAF5EC",
+  "icons": [
+    { "src": "img/icon-180.png", "sizes": "180x180", "type": "image/png", "purpose": "any" }
+  ]
+}
