@@ -69,7 +69,7 @@ const TASKS = [
 
 /* ---------------- נתונים: רשימת ציוד ---------------- */
 const PACKING = [
-  { id: 'docs', emo: '📄', title: 'מסמכים', items: [
+  { id: 'docs', emo: '📄', title: 'מסמכים (משותף)', items: [
     { id: 'dc1', t: 'דרכונים (שלושה!)' },
     { id: 'dc2', t: 'כרטיסי טיסה / אישור הזמנה 8P6VAJ' },
     { id: 'dc3', t: 'אישור מלון (קוד 803002704)' },
@@ -77,54 +77,90 @@ const PACKING = [
     { id: 'dc5', t: 'כרטיסי אשראי' },
     { id: 'dc6', t: 'אירו במזומן' },
   ]},
-  { id: 'elec', emo: '🔌', title: 'אלקטרוניקה', items: [
+  { id: 'elec', emo: '🔌', title: 'אלקטרוניקה (משותף)', items: [
     { id: 'el1', t: 'טלפונים' },
     { id: 'el2', t: 'מטענים', n: 'בקפריסין שקע כמו בארץ? לא! שקע בריטי G — לקחת מתאמים' },
     { id: 'el3', t: 'סוללה ניידת' },
     { id: 'el4', t: 'אוזניות' },
     { id: 'el5', t: 'שעון ומטען' },
   ]},
-  { id: 'cloth', emo: '👕', title: 'ביגוד', items: [
-    { id: 'cl1', t: 'בגדים לעידן' },
-    { id: 'cl2', t: 'בגדים לליאל', n: 'קלים ונוחים — חם, והבטן מתחילה להיראות 🤰' },
-    { id: 'cl3', t: 'בגדים לליאו', n: 'כולל 2-3 סטים ליום — תינוקות מתלכלכים' },
-    { id: 'cl4', t: 'בגדי ים' },
-    { id: 'cl5', t: 'כובעים לכולם' },
-    { id: 'cl6', t: 'כפכפים' },
+  { id: 'liel', emo: '👩', title: 'ליאל', items: [
+    { id: 'cl2', t: 'בגדים ליום ×4', n: 'קלים ונוחים — חם, והבטן מתחילה להיראות 🤰' },
+    { id: 'll_eve', t: 'בגדים לערב ×3' },
+    { id: 'cl4', t: 'בגד ים + כיסוי לבגד ים' },
+    { id: 'll_under', t: 'חזיות ותחתונים' },
+    { id: 'll_pj', t: '2 פיג׳מות' },
+    { id: 'll_sweat', t: 'סווטשרט', n: 'לטיסה ולערבים ממוזגים' },
+    { id: 'cl6', t: 'סנדלים וכפכפים לים' },
+    { id: 'll_hat', t: 'כובע ומשקפי שמש' },
+    { id: 'll_wallet', t: 'ארנק' },
+    { id: 'll_coffee', t: 'קפה ☕' },
+    { id: 'ba1', t: 'מברשת שיניים + משחה' },
+    { id: 'll_hairbrush', t: 'מברשת שיער ומסרק' },
+    { id: 'll_razor', t: 'סכין גילוח' },
+    { id: 'll_shampoo', t: 'שמפו + מסיכה לשיער' },
+    { id: 'ba3', t: 'סבון גוף וסבון פנים' },
+    { id: 'll_facecare', t: 'קרם פנים, קרם עיניים וסרום הבהרה' },
+    { id: 'll_spf', t: 'קרם הגנה לפנים ולגוף' },
+    { id: 'll_micellar', t: 'מים מיסלריים ופדים לניקוי' },
+    { id: 'll_makeup', t: 'איפור', n: 'מייקאפ, אודם, מסקרה, סומק, צללית לגבות, שפתון ליובש' },
+    { id: 'll_deo', t: 'דאודורנט (ספידסטיק) ובושם' },
+    { id: 'll_hairtie', t: 'גומיות לשיער וקליפס' },
+    { id: 'll_file', t: 'פצירה וקיסמי אוזניים' },
+    { id: 'me4', t: 'ויטמינים להריון' },
+    { id: 'll_supp', t: 'תוספי תזונה' },
+    { id: 'll_meds', t: 'אקמול / אופטלגין' },
   ]},
-  { id: 'baby', emo: '👶', title: 'ציוד לליאו', items: [
-    { id: 'bb1', t: 'עגלה', n: 'נמסרת בשער העלייה למטוס ומתקבלת ביציאה' },
+  { id: 'idan', emo: '👨', title: 'עידן', items: [
+    { id: 'cl1', t: 'בגדים ליום ולערב', n: 'קלים לחום הקפריסאי' },
+    { id: 'id_swim', t: 'בגד ים וכפכפים' },
+    { id: 'cl5', t: 'כובע ומשקפי שמש' },
+    { id: 'id_under', t: 'תחתונים וגרביים' },
+    { id: 'id_pj', t: 'פיג׳מה' },
+    { id: 'id_tooth', t: 'מברשת שיניים + משחה' },
+    { id: 'ba4', t: 'דאודורנט' },
+    { id: 'id_wash', t: 'סבון ושמפו', n: 'אם לא לוקחים משותף' },
+    { id: 'id_wallet', t: 'ארנק ומשקפי שמש' },
+  ]},
+  { id: 'liao', emo: '👶', title: 'ליאו', items: [
+    { id: 'bb1', t: 'עגלה / טיולון', n: 'נמסרת בשער העלייה למטוס ומתקבלת ביציאה' },
+    { id: 'lo_carrier', t: 'מנשא' },
     { id: 'bb2', t: 'תיק החתלה' },
-    { id: 'bb3', t: 'חיתולים', n: 'מספיק לימים הראשונים — יש סופר ליד המלון' },
+    { id: 'bb3', t: 'חיתולים (טיטולים)', n: 'מספיק לימים הראשונים — יש סופר ליד המלון' },
     { id: 'bb4', t: 'מגבונים' },
+    { id: 'lo_mat', t: 'משטחי החתלה' },
+    { id: 'bb13', t: 'משחת/קרם החתלה' },
     { id: 'bb5', t: 'בקבוקים' },
+    { id: 'lo_water', t: 'בקבוק מים ×2', n: 'מים מינרלים להכנת מטרנה — לא מי ברז' },
+    { id: 'bb11', t: 'מזון תינוקות / מטרנה' },
+    { id: 'lo_spoon', t: 'כפיות וסינרים' },
     { id: 'bb6', t: 'נשנושים' },
+    { id: 'lo_bamba', t: 'במבה' },
+    { id: 'lo_supp', t: 'ברזל וביוגאיה', n: 'התוספים של ליאו' },
+    { id: 'lo_nose', t: 'טיפות אף' },
+    { id: 'cl3', t: 'בגדים לליאו', n: 'כולל 2-3 סטים ליום — תינוקות מתלכלכים' },
+    { id: 'lo_sleep', t: 'בגדים לשינה' },
+    { id: 'lo_long', t: 'בגדים ארוכים וגרביים' },
     { id: 'bb7', t: 'צעצועים אהובים' },
     { id: 'bb8', t: 'שמיכה' },
-    { id: 'bb9', t: 'מגן שמש לעגלה', n: 'לא לכסות בשמיכה — כולא חום!' },
-    { id: 'bb10', t: 'מוצץ רזרבי' },
-    { id: 'bb11', t: 'מזון תינוקות / מטרנה', n: 'מים מינרלים להכנה — לא מי ברז' },
+    { id: 'be4', t: 'כובע רחב שוליים' },
     { id: 'bb12', t: 'בגד ים + מצוף לגיל שנה' },
-    { id: 'bb13', t: 'קרם החתלה' },
+    { id: 'bb9', t: 'מגן שמש לעגלה', n: 'לא לכסות בשמיכה — כולא חום!' },
+    { id: 'bb10', t: 'מוצצים + מחזיק מוצץ' },
+    { id: 'lo_nail', t: 'גוזז ציפורניים' },
+    { id: 'lo_noise', t: 'מבודד רעשים / רעש לבן' },
+    { id: 'ba2', t: 'שמפו וסבון גוף לתינוק' },
   ]},
-  { id: 'meds', emo: '💊', title: 'תרופות', items: [
+  { id: 'meds', emo: '💊', title: 'תרופות (משותף)', items: [
     { id: 'me1', t: 'תרופות קבועות' },
-    { id: 'me2', t: 'אקמול/נורופן', n: 'כולל סירופ לתינוק + מזרק מדידה' },
+    { id: 'me2', t: 'אקמול/נורופן', n: 'כולל סירופ לתינוק (נובימול) + מזרק מדידה' },
     { id: 'me3', t: 'מדחום' },
-    { id: 'me4', t: 'ויטמינים להריון' },
     { id: 'me5', t: 'פלסטרים וחומר חיטוי' },
   ]},
-  { id: 'bath', emo: '🧴', title: 'רחצה', items: [
-    { id: 'ba1', t: 'מברשות שיניים' },
-    { id: 'ba2', t: 'שמפו', n: 'כולל שמפו בייבי לליאו' },
-    { id: 'ba3', t: 'סבון' },
-    { id: 'ba4', t: 'דאודורנט' },
-  ]},
-  { id: 'beach', emo: '🏖️', title: 'ים ובריכה', items: [
+  { id: 'beach', emo: '🏖️', title: 'ים ובריכה (משותף)', items: [
     { id: 'be1', t: 'קרם הגנה', n: 'SPF50 מינרלי לליאו, רגיל למבוגרים — UV שם 10+' },
     { id: 'be2', t: 'תיק ים' },
     { id: 'be3', t: 'שקית לבגדים רטובים' },
-    { id: 'be4', t: 'כובע רחב שוליים לליאו' },
   ]},
   { id: 'hand', emo: '🎒', title: 'לתיק היד (טיסה)', items: [
     { id: 'hn1', t: 'בגדים להחלפה', n: 'גם לכם — תינוק על הידיים = הפתעות' },
@@ -150,7 +186,7 @@ const ITINERARY = [
   {
     date: '2026-07-11', dow: 'שבת', title: 'יום הגעה — נחיתה רכה 🛬', emo: '1',
     plan: [
-      { time: '05:30', emo: '🚗', t: 'יציאה לנתב"ג', s: 'אין צ׳ק-אין אונליין — צריך להספיק דלפק, מזוודות ועגלה' },
+      { time: '05:30', emo: '🚗', t: 'הגעה לנתב"ג', s: 'אין צ׳ק-אין אונליין — צריך להספיק דלפק, מזוודות ועגלה' },
       { time: '08:40', emo: '✈️', t: 'המראה — ישראייר 6H595', s: 'טיסה קצרצרה: שעה ועשר דקות. בקבוק לליאו בהמראה' },
       { time: '09:50', emo: '🛬', t: 'נחיתה בפאפוס', s: 'העגלה מחכה ביציאה מהמטוס. מונית שהוזמנה מראש עם כיסא תינוק' },
       { time: '10:45', emo: '🏨', t: 'הגעה למלון King Evelthon', s: 'אם החדר לא מוכן — משאירים מזוודות ויורדים לשתות משהו ליד הבריכה' },
@@ -216,18 +252,18 @@ const ITINERARY = [
 /* ---------------- נתונים: אטרקציות ---------------- */
 const ATTRACTIONS = [
   {
-    id: 'zoo', kicker: 'יום 3 · שני 13.7', title: 'גן החיות של פאפוס', img: 'img/paphos-zoo.jpg',
-    desc: 'גן החיות הגדול בקפריסין, בכפר פייה — 100,000 מ"ר של גנים טרופיים עם ג׳ירפות, פלמינגו, קנגורו ואוסף התוכים הגדול באירופה. טוואים ותוכים מסתובבים חופשי בין השבילים — קסם אמיתי לגיל של ליאו.',
+    id: 'hotelarea', kicker: 'יום 1 · הבסיס שלנו לכל הימים', title: 'King Evelthon והסביבה', img: 'img/hotel-beach.jpg',
+    desc: 'המלון שלנו יושב על קו החוף של כלוראקה, עם בריכות, חוף פרטי וטיילת שקיעה. חצי פנסיון — בוקר וערב פתורים; בין לבין: בריכת פעוטות, דשא ענק וגלידה. קו 615 עוצר ממש מול הכניסה.',
     facts: [
-      { k: 'שעות (יולי)', v: '09:00–18:00' },
-      { k: 'כניסה', v: '‎€17.50 מבוגר · ליאו חינם' },
-      { k: 'הסעה מהמלון', v: '‎€22 כולל כניסה' },
-      { k: 'מופע תוכים', v: '12:00 · 14:30 · 17:00' },
+      { k: 'אישור הזמנה', v: '803002704' },
+      { k: 'חדר', v: 'Superior · נוף חלקי לים · 4 לילות' },
+      { k: 'בסיס', v: 'חצי פנסיון (בוקר+ערב)' },
+      { k: 'טלפון', v: '‎+357 26 622405' },
     ],
-    tips: ['להגיע ב-09:00 בפתיחה — קריר יותר והחיות פעילות', 'שבילים נוחים לעגלה + הרבה צל, אבל לקחת מים וכובע', 'מסעדת Flamingo בפנים — יש כיסאות תינוק', 'להזמין את ההסעה מראש: ‎+357 26 813852'],
+    tips: ['לבקש בצ׳ק-אין: מיטת תינוק, חדר שקט, ולהזכיר את יום ההולדת', 'שעת שיא בבריכה 11:00–15:00 — לליאו עדיף בוקר מוקדם או 16:00+', 'סופרמרקט במרחק הליכה — חיתולים, מים מינרלים ופירות', 'ארוחת ערב מוקדמת (18:30) = חלון מושלם לפני השינה של ליאו'],
     links: [
-      { t: 'שעות עדכניות באתר הגן', u: 'https://www.pafoszoo.com/times' },
-      { t: 'מיקום ושעות בגוגל', u: 'https://www.google.com/maps/search/?api=1&query=Pafos+Zoo+Peyia+Cyprus' },
+      { t: 'דף המלון הרשמי', u: 'https://www.tsokkos.com/hotel/King-Evelthon-Beach-Hotel-and-Resort/' },
+      { t: 'המלון בגוגל מפות', u: 'https://www.google.com/maps/search/?api=1&query=King+Evelthon+Beach+Hotel+Chloraka' },
     ],
   },
   {
@@ -246,21 +282,6 @@ const ATTRACTIONS = [
     ],
   },
   {
-    id: 'coralbay', kicker: 'יום 4 · שלישי 14.7', title: 'חוף קורל ביי', img: 'img/coral-bay.jpg',
-    desc: 'החוף המפורסם של אזור פאפוס — מפרץ פרסה מוגן עם חול זהוב ורך ומים רדודים וצלולים בדגל כחול. הכניסה המדורגת והגלים המינימליים הופכים אותו לחוף המושלם לטבילה ראשונה של תינוק בים.',
-    facts: [
-      { k: 'הגעה מהמלון', v: 'קו 615 · ~15 דק׳ · ‎€2' },
-      { k: 'מיטה + שמשייה', v: '‎€2.50 לפריט' },
-      { k: 'מצילים ביולי', v: 'מ-07:00 עד הערב' },
-      { k: 'מתקנים', v: 'שירותים · מקלחות · מלתחות' },
-    ],
-    tips: ['להגיע לפני 10:00 — שקט יותר וקריר יותר', 'העגלה נשארת בטיילת שמאחורי החוף — בחול היא נתקעת', 'המים רדודים הרבה מטרים פנימה — מושלם לליאו עם השגחה', 'קפה וגלידריות ממש מאחורי החוף'],
-    links: [
-      { t: 'החוף בגוגל מפות', u: 'https://www.google.com/maps/search/?api=1&query=Coral+Bay+Beach+Peyia+Cyprus' },
-      { t: 'דף החוף באתר התיירות הרשמי', u: 'https://www.visitcyprus.com/discover-cyprus/sun-sea/beaches/coral-bay-beach-blue-flag/' },
-    ],
-  },
-  {
     id: 'rest', kicker: 'יום 2 · 17:00 · יום הולדת 🎂', title: 'Sail At Castle — ערב יום הולדת', img: 'img/paphos-castle.jpg',
     desc: 'מסעדה על קו המים ממש ליד טירת פאפוס — שילוב של פירות ים טריים, בשרים וקינוחים ביתיים, עם הנוף הכי חגיגי בנמל. דירוג 4.5 בטריפאדוויזר, תפריט ילדים, וגישה נוחה לעגלה מהטיילת. בשעה 17:00 עוד שקט — בדיוק בשבילנו.',
     facts: [
@@ -276,18 +297,33 @@ const ATTRACTIONS = [
     ],
   },
   {
-    id: 'hotelarea', kicker: 'הבסיס שלנו · כל הימים', title: 'King Evelthon והסביבה', img: 'img/hotel-beach.jpg',
-    desc: 'המלון שלנו יושב על קו החוף של כלוראקה, עם בריכות, חוף פרטי וטיילת שקיעה. חצי פנסיון — בוקר וערב פתורים; בין לבין: בריכת פעוטות, דשא ענק וגלידה. קו 615 עוצר ממש מול הכניסה.',
+    id: 'zoo', kicker: 'יום 3 · שני 13.7', title: 'גן החיות של פאפוס', img: 'img/paphos-zoo.jpg',
+    desc: 'גן החיות הגדול בקפריסין, בכפר פייה — 100,000 מ"ר של גנים טרופיים עם ג׳ירפות, פלמינגו, קנגורו ואוסף התוכים הגדול באירופה. טוואים ותוכים מסתובבים חופשי בין השבילים — קסם אמיתי לגיל של ליאו.',
     facts: [
-      { k: 'אישור הזמנה', v: '803002704' },
-      { k: 'חדר', v: 'Superior · נוף חלקי לים · 4 לילות' },
-      { k: 'בסיס', v: 'חצי פנסיון (בוקר+ערב)' },
-      { k: 'טלפון', v: '‎+357 26 622405' },
+      { k: 'שעות (יולי)', v: '09:00–18:00' },
+      { k: 'כניסה', v: '‎€17.50 מבוגר · ליאו חינם' },
+      { k: 'הסעה מהמלון', v: '‎€22 כולל כניסה' },
+      { k: 'מופע תוכים', v: '12:00 · 14:30 · 17:00' },
     ],
-    tips: ['לבקש בצ׳ק-אין: מיטת תינוק, חדר שקט, ולהזכיר את יום ההולדת', 'שעת שיא בבריכה 11:00–15:00 — לליאו עדיף בוקר מוקדם או 16:00+', 'סופרמרקט במרחק הליכה — חיתולים, מים מינרלים ופירות', 'ארוחת ערב מוקדמת (18:30) = חלון מושלם לפני השינה של ליאו'],
+    tips: ['להגיע ב-09:00 בפתיחה — קריר יותר והחיות פעילות', 'שבילים נוחים לעגלה + הרבה צל, אבל לקחת מים וכובע', 'מסעדת Flamingo בפנים — יש כיסאות תינוק', 'להזמין את ההסעה מראש: ‎+357 26 813852'],
     links: [
-      { t: 'דף המלון הרשמי', u: 'https://www.tsokkos.com/hotel/King-Evelthon-Beach-Hotel-and-Resort/' },
-      { t: 'המלון בגוגל מפות', u: 'https://www.google.com/maps/search/?api=1&query=King+Evelthon+Beach+Hotel+Chloraka' },
+      { t: 'שעות עדכניות באתר הגן', u: 'https://www.pafoszoo.com/times' },
+      { t: 'מיקום ושעות בגוגל', u: 'https://www.google.com/maps/search/?api=1&query=Pafos+Zoo+Peyia+Cyprus' },
+    ],
+  },
+  {
+    id: 'coralbay', kicker: 'יום 4 · שלישי 14.7', title: 'חוף קורל ביי', img: 'img/coral-bay.jpg',
+    desc: 'החוף המפורסם של אזור פאפוס — מפרץ פרסה מוגן עם חול זהוב ורך ומים רדודים וצלולים בדגל כחול. הכניסה המדורגת והגלים המינימליים הופכים אותו לחוף המושלם לטבילה ראשונה של תינוק בים.',
+    facts: [
+      { k: 'הגעה מהמלון', v: 'קו 615 · ~15 דק׳ · ‎€2' },
+      { k: 'מיטה + שמשייה', v: '‎€2.50 לפריט' },
+      { k: 'מצילים ביולי', v: 'מ-07:00 עד הערב' },
+      { k: 'מתקנים', v: 'שירותים · מקלחות · מלתחות' },
+    ],
+    tips: ['להגיע לפני 10:00 — שקט יותר וקריר יותר', 'העגלה נשארת בטיילת שמאחורי החוף — בחול היא נתקעת', 'המים רדודים הרבה מטרים פנימה — מושלם לליאו עם השגחה', 'קפה וגלידריות ממש מאחורי החוף'],
+    links: [
+      { t: 'החוף בגוגל מפות', u: 'https://www.google.com/maps/search/?api=1&query=Coral+Bay+Beach+Peyia+Cyprus' },
+      { t: 'דף החוף באתר התיירות הרשמי', u: 'https://www.visitcyprus.com/discover-cyprus/sun-sea/beaches/coral-bay-beach-blue-flag/' },
     ],
   },
 ];
@@ -755,6 +791,198 @@ function observeReveals() {
   document.querySelectorAll('.rv:not(.in)').forEach(el => revealObserver.observe(el));
 }
 
+/* ============================================================
+   גלריה — יצירת גלויות מעוצבות מתמונות (canvas, מקומי בלבד)
+   ============================================================ */
+const GAL_VIBES = {
+  general: { emo: '☀️', sub: 'פאפוס · שמש וים', accent: '#E07856' },
+  sea:     { emo: '🌊', sub: 'חוף וים תיכון', accent: '#116A7B' },
+  harbour: { emo: '⛵', sub: 'נמל פאפוס', accent: '#0B4F5C' },
+  zoo:     { emo: '🦜', sub: 'גן החיות של פאפוס', accent: '#7A8450' },
+  bday:    { emo: '🎂', sub: 'יום הולדת בפאפוס', accent: '#E07856' },
+};
+let galCount = 0;
+
+function roundRectPath(ctx, x, y, w, h, r) {
+  const rr = Math.min(r, w / 2, h / 2);
+  ctx.beginPath();
+  ctx.moveTo(x + rr, y);
+  ctx.arcTo(x + w, y, x + w, y + h, rr);
+  ctx.arcTo(x + w, y + h, x, y + h, rr);
+  ctx.arcTo(x, y + h, x, y, rr);
+  ctx.arcTo(x, y, x + w, y, rr);
+  ctx.closePath();
+}
+
+/* ציור התמונה במילוי (cover) בתוך חלון עם פינות מעוגלות */
+function drawImageCover(ctx, img, x, y, w, h, r) {
+  ctx.save();
+  roundRectPath(ctx, x, y, w, h, r);
+  ctx.clip();
+  const ir = img.width / img.height, wr = w / h;
+  let dw, dh, dx, dy;
+  if (ir > wr) { dh = h; dw = h * ir; dx = x - (dw - w) / 2; dy = y; }
+  else { dw = w; dh = w / ir; dx = x; dy = y - (dh - h) / 2; }
+  ctx.drawImage(img, dx, dy, dw, dh);
+  ctx.restore();
+}
+
+async function drawPostcard(canvas, img, caption, vibeKey) {
+  const vibe = GAL_VIBES[vibeKey] || GAL_VIBES.general;
+  const landscape = img.width > img.height * 1.08;
+  const W = landscape ? 1500 : 1080;
+  const H = landscape ? 1080 : 1350;
+  canvas.width = W; canvas.height = H;
+  const ctx = canvas.getContext('2d');
+  ctx.direction = 'rtl';
+
+  // ודא שגופנים נטענו לפני הציור
+  try {
+    await Promise.all([
+      document.fonts.load('800 70px "Frank Ruhl Libre"'),
+      document.fonts.load('600 34px "Heebo"'),
+      document.fonts.ready,
+    ]);
+  } catch (e) { /* fallback to system fonts */ }
+
+  // רקע שנהב
+  ctx.fillStyle = '#FAF5EC';
+  ctx.fillRect(0, 0, W, H);
+
+  const pad = Math.round(W * 0.045);
+  // כרטיס לבן עם מסגרת
+  ctx.save();
+  ctx.shadowColor = 'rgba(43,39,35,0.18)';
+  ctx.shadowBlur = 40; ctx.shadowOffsetY = 18;
+  roundRectPath(ctx, pad, pad, W - pad * 2, H - pad * 2, 46);
+  ctx.fillStyle = '#FFFFFF';
+  ctx.fill();
+  ctx.restore();
+
+  // חלון התמונה
+  const inX = pad + Math.round(W * 0.035);
+  const inY = pad + Math.round(W * 0.035);
+  const inW = W - inX * 2;
+  const bandH = Math.round(H * (landscape ? 0.26 : 0.22));
+  const photoH = H - inY - bandH - Math.round(W * 0.02) - pad;
+  drawImageCover(ctx, img, inX, inY, inW, photoH, 30);
+  // מסגרת דקה סביב התמונה
+  ctx.strokeStyle = 'rgba(17,106,123,0.25)';
+  ctx.lineWidth = 3;
+  roundRectPath(ctx, inX, inY, inW, photoH, 30);
+  ctx.stroke();
+
+  // רצועת כיתוב
+  const bandY = inY + photoH + Math.round(W * 0.03);
+  const cx = W / 2;
+
+  // אמוג'י אווירה
+  ctx.textAlign = 'center';
+  ctx.textBaseline = 'alphabetic';
+  ctx.font = `${Math.round(W * 0.058)}px "Heebo", sans-serif`;
+  ctx.fillText(vibe.emo, cx, bandY + Math.round(W * 0.055));
+
+  // כיתוב ראשי
+  const title = (caption && caption.trim()) ? caption.trim() : 'פאפוס 2026';
+  let titleSize = Math.round(W * (landscape ? 0.058 : 0.07));
+  ctx.fillStyle = '#2B2723';
+  ctx.font = `800 ${titleSize}px "Frank Ruhl Libre", "Heebo", serif`;
+  // כיווץ אם ארוך מדי
+  while (ctx.measureText(title).width > inW * 0.9 && titleSize > 30) {
+    titleSize -= 4;
+    ctx.font = `800 ${titleSize}px "Frank Ruhl Libre", "Heebo", serif`;
+  }
+  const titleY = bandY + Math.round(W * 0.055) + titleSize + Math.round(W * 0.02);
+  ctx.fillText(title, cx, titleY);
+
+  // קו מפריד עם נקודות בצבע האווירה
+  const lineY = titleY + Math.round(W * 0.028);
+  ctx.fillStyle = vibe.accent;
+  for (let i = -2; i <= 2; i++) {
+    ctx.beginPath();
+    ctx.arc(cx + i * 26, lineY, i === 0 ? 6 : 4, 0, Math.PI * 2);
+    ctx.fill();
+  }
+
+  // תת-כותרת
+  ctx.fillStyle = '#116A7B';
+  ctx.font = `600 ${Math.round(W * 0.03)}px "Heebo", sans-serif`;
+  ctx.fillText(`${vibe.sub} · 11–15 ביולי 2026`, cx, lineY + Math.round(W * 0.05));
+
+  // חותמת פינה
+  ctx.save();
+  ctx.translate(W - pad - Math.round(W * 0.02), pad + Math.round(W * 0.02));
+  ctx.rotate(-0.12);
+  ctx.fillStyle = 'rgba(242,184,114,0.95)';
+  roundRectPath(ctx, -Math.round(W * 0.12), 0, Math.round(W * 0.12), Math.round(W * 0.05), 10);
+  ctx.fill();
+  ctx.fillStyle = '#6b4a12';
+  ctx.textAlign = 'center';
+  ctx.font = `800 ${Math.round(W * 0.022)}px "Heebo", sans-serif`;
+  ctx.fillText("PAPHOS '26", -Math.round(W * 0.06), Math.round(W * 0.033));
+  ctx.restore();
+}
+
+function addPostcard(img, caption, vibeKey) {
+  const wrap = document.getElementById('galWrap');
+  const empty = document.getElementById('galEmpty');
+  if (empty) empty.style.display = 'none';
+  galCount++;
+  const n = galCount;
+
+  const card = document.createElement('div');
+  card.className = 'shell gal-card rv in';
+  card.innerHTML = `
+    <div class="core flush">
+      <canvas class="gal-canvas" id="galCanvas${n}"></canvas>
+      <div class="gal-actions">
+        <button class="gal-dl" data-n="${n}">⬇️ הורדת הגלויה</button>
+        <button class="gal-rm" data-n="${n}" aria-label="הסרה">הסרה</button>
+      </div>
+    </div>`;
+  wrap.prepend(card);
+
+  const canvas = card.querySelector('canvas');
+  drawPostcard(canvas, img, caption, vibeKey);
+
+  card.querySelector('.gal-dl').addEventListener('click', () => {
+    const a = document.createElement('a');
+    a.download = `paphos-postcard-${n}.jpg`;
+    a.href = canvas.toDataURL('image/jpeg', 0.92);
+    a.click();
+  });
+  card.querySelector('.gal-rm').addEventListener('click', () => {
+    card.remove();
+    if (!wrap.children.length && empty) empty.style.display = '';
+  });
+}
+
+function initGallery() {
+  const input = document.getElementById('galInput');
+  const drop = document.getElementById('galDrop');
+  if (!input || !drop) return;
+
+  const handleFiles = (files) => {
+    const caption = document.getElementById('galCaption').value;
+    const vibe = document.getElementById('galVibe').value;
+    Array.from(files).filter(f => f.type.startsWith('image/')).forEach(file => {
+      const reader = new FileReader();
+      reader.onload = e => {
+        const img = new Image();
+        img.onload = () => addPostcard(img, caption, vibe);
+        img.src = e.target.result;
+      };
+      reader.readAsDataURL(file);
+    });
+    input.value = '';
+  };
+
+  input.addEventListener('change', () => { if (input.files.length) handleFiles(input.files); });
+  ['dragover', 'dragenter'].forEach(ev => drop.addEventListener(ev, e => { e.preventDefault(); drop.classList.add('drag'); }));
+  ['dragleave', 'drop'].forEach(ev => drop.addEventListener(ev, e => { e.preventDefault(); drop.classList.remove('drag'); }));
+  drop.addEventListener('drop', e => { if (e.dataTransfer && e.dataTransfer.files.length) handleFiles(e.dataTransfer.files); });
+}
+
 function init() {
   loadLocal();
   renderAllChecks();
@@ -776,6 +1004,8 @@ function init() {
     }));
   document.querySelectorAll('.subtab').forEach(t =>
     t.addEventListener('click', () => switchListTab(t.dataset.tab)));
+
+  initGallery();
 
   observeReveals();
   pullRemote().then(() => startPolling());

@@ -191,8 +191,14 @@
       <div class="menu-arrow">→</div>
     </div></div>
 
+    <div class="shell rv"><div class="core menu-card" data-goto="gallery">
+      <div class="menu-emo">📸</div>
+      <div><div class="menu-t">גלויות מהטיול</div><div class="menu-s">העלו תמונות → גלויה מעוצבת בהשראת פאפוס</div></div>
+      <div class="menu-arrow">→</div>
+    </div></div>
+
     <div class="foot rv">
-      <b>פאפוס 2026</b> · נבנה באהבה לעידן, ליאל וליאו 💙<br>
+      <b>פאפוס 2026</b> · נבנה באהבה לליאל 💙<br>
       צילומים: <a href="https://unsplash.com" target="_blank" rel="noopener" style="color:inherit">Unsplash</a> · <a href="https://www.pexels.com" target="_blank" rel="noopener" style="color:inherit">Pexels</a> — תמונות אווירה; חלקן מאתרים אחרים בקפריסין
     </div>
   </section>
@@ -206,9 +212,9 @@
 
     <div class="shell rv"><div class="core">
       <div class="cg-title" style="margin-bottom:0.5rem"><span class="emo">🚏</span>הקווים שלנו</div>
-      <div class="fact-row"><div class="fact-ico">6️⃣1️⃣5️⃣</div><div><div class="fact-t">מול המלון ↔ קורל ביי ↔ תחנת Tombs of the Kings</div><div class="fact-v">כל 10–25 דק׳ · עד ~00:15 בלילה <small>— הקו שלנו לחוף ולעיר</small></div></div></div>
-      <div class="fact-row"><div class="fact-ico">6️⃣1️⃣1️⃣</div><div><div class="fact-t">תחנת Tombs of the Kings ↔ הנמל</div><div class="fact-v">ההמשך לנמל פאפוס <small>— מתחברים אליו מקו 615</small></div></div></div>
-      <div class="fact-row"><div class="fact-ico">6️⃣1️⃣2️⃣</div><div><div class="fact-t">שדה התעופה ↔ העיר</div><div class="fact-v">בערך כל שעה · ~35 דק׳ <small>— אנחנו לוקחים מונית, אבל טוב לדעת</small></div></div></div>
+      <div class="fact-row"><div class="fact-ico line-badge">615</div><div><div class="fact-t">מול המלון ↔ קורל ביי ↔ תחנת Tombs of the Kings</div><div class="fact-v">כל 10–25 דק׳ · עד ~00:15 בלילה <small>— הקו שלנו לחוף ולעיר</small></div></div></div>
+      <div class="fact-row"><div class="fact-ico line-badge">611</div><div><div class="fact-t">תחנת Tombs of the Kings ↔ הנמל</div><div class="fact-v">ההמשך לנמל פאפוס <small>— מתחברים אליו מקו 615</small></div></div></div>
+      <div class="fact-row"><div class="fact-ico line-badge">612</div><div><div class="fact-t">שדה התעופה ↔ העיר</div><div class="fact-v">בערך כל שעה · ~35 דק׳ <small>— אנחנו לוקחים מונית, אבל טוב לדעת</small></div></div></div>
       <div class="fact-row"><div class="fact-ico">🦜</div><div><div class="fact-t">לגן החיות</div><div class="fact-v">הסעה של הגן מהמלון (בהזמנה מראש) <small>— ‎€22 כולל כניסה. אין קו ציבורי לגן עצמו</small></div></div></div>
     </div></div>
 
@@ -304,6 +310,43 @@
       <div class="cg-title" style="margin-bottom:0.5rem"><span class="emo">🔌</span>קטנות ששוכחים</div>
       <div class="callout info" style="margin-top:0">בקפריסין <b>שקע בריטי (G)</b> — חובה מתאמים! · שעון קפריסין = שעון ישראל · העברית לא שגורה אבל אנגלית כן · יום ראשון הרבה חנויות סגורות, המסעדות פתוחות.</div>
     </div></div>
+  </section>
+
+  <!-- ================= גלריה / גלויות ================= -->
+  <section class="view" id="view-gallery">
+    <button class="back-btn" data-goto="more">→ חזרה</button>
+    <div class="sec-head" style="padding-top:0"><span class="eyebrow coral">מזכרת מהחופשה</span><h2 class="sec-title">גלויות מהטיול 📸</h2></div>
+
+    <div class="callout love" style="margin-bottom:1.2rem">🎨 העלו תמונות מהטיול — מאטרקציה, מהחוף או סתם רגע חמוד — והאפליקציה תעצב מהן <b>גלויה</b> בהשראת פאפוס, מוכנה להורדה ולשיתוף. התמונות נשארות במכשיר שלכם בלבד ולא נשמרות בענן.</div>
+
+    <div class="shell rv"><div class="core">
+      <label class="gal-drop" id="galDrop">
+        <input type="file" id="galInput" accept="image/*" multiple hidden>
+        <div class="gal-drop-emo">🖼️</div>
+        <div class="gal-drop-t">בחרו תמונה או כמה</div>
+        <div class="gal-drop-s">לחצו כאן להעלאה מהטלפון או מהמחשב</div>
+      </label>
+
+      <div class="gal-controls">
+        <div class="gal-field">
+          <label for="galCaption">כיתוב לגלויה</label>
+          <input type="text" id="galCaption" maxlength="60" placeholder="למשל: השקיעה מהנמל 🌅">
+        </div>
+        <div class="gal-field">
+          <label for="galVibe">אווירה</label>
+          <select id="galVibe">
+            <option value="general">פאפוס · שמש וים ☀️</option>
+            <option value="sea">חוף וים 🌊</option>
+            <option value="harbour">הנמל והשייט ⛵</option>
+            <option value="zoo">גן החיות 🦜</option>
+            <option value="bday">יום הולדת 🎂</option>
+          </select>
+        </div>
+      </div>
+    </div></div>
+
+    <div id="galWrap" class="gal-wrap"></div>
+    <div id="galEmpty" class="gal-empty">עוד אין גלויות — התחילו בהעלאת תמונה למעלה ✨</div>
   </section>
 
 </div>
